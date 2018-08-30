@@ -4,5 +4,5 @@
     </head>
     <body>
                 <%@include file="jspf/nav.jspf" %>
-        <h1>Contato adicionado com sucesso!</h1>
+        <h1>Empresa adicionado com sucesso!</h1>
     <%@include file="jspf/footer.jspf" %>

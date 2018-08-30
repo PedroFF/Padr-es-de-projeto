@@ -10,5 +10,5 @@
     </head>
     <body>
                 <%@include file="jspf/nav.jspf" %>
-        <h1>Algum erro aconteceu durante a gravação do Contato</h1>
+        <h1>Algum erro aconteceu durante a gravação da Empresa</h1>
 <%@include file="jspf/footer.jspf" %>

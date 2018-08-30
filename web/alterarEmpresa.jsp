@@ -14,16 +14,19 @@
     </thead>
     <tbody>
     <c:forEach items="${empresas}" var="empresa">
+        <tr>
         <td>${empresa.getId()}</td>
         <td>${empresa.getNome()}</td>
+        </tr>
     </c:forEach>
+    <br/>
 </tbody>
 </table>
 <form action="FrontController?action=AlterarEmpresaPost" method="post">
     Entre com o id da empresa para pesquisar:
-    <input type="text" name="textNome"/><br/>
+    <input type="text" name="id"/><br/>
     Nome:
-    <input type="text" name="textEmail"/><br/>
+    <input type="text" name="nome"/><br/>
     <input type="submit"/>
 </form>
 <%@include file="jspf/footer.jspf" %>

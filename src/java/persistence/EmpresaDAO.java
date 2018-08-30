@@ -129,7 +129,7 @@ public class EmpresaDAO {
         try {
             conn = DatabaseLocator.getInstance().getConnection();
             st = conn.createStatement();
-            st.execute("UPDATE empresa SET nome ='" + empresa.getNome() + "' WHERE id ='" + empresa.getId() + "'");
+            st.execute("UPDATE empresa SET nome ='" + empresa.getNome() + "' WHERE id =" + empresa.getId());
         } catch (SQLException e) {
             throw e;
         } finally {

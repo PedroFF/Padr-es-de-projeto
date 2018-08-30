@@ -28,6 +28,7 @@ public class AlterarEmpresaAction implements Action {
          try {
              response.setContentType("text/html;charset=UTF-8");
              List<Empresa> empresas = new ArrayList(EmpresaDAO.getINSTANCE().getEmpresas());
+             request.setAttribute("empresas", empresas);
              request.getRequestDispatcher("alterarEmpresa.jsp").forward(request, response);
          } catch (SQLException ex) {
              Logger.getLogger(AlterarEmpresaAction.class.getName()).log(Level.SEVERE, null, ex);
