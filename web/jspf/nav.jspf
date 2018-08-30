@@ -9,7 +9,7 @@
                 <a class="nav-link" href="FrontController?action=GravarContato">Inserir Contato</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="FrontController?action=AlterarContato">Alterar Contato<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="FrontController?action=AlterarContato">Alterar Contato</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="FrontController?action=LerContato">Ler Contatos</a>
@@ -21,7 +21,7 @@
                 <a class="nav-link" href="FrontController?action=GravarEmpresa">Inserir Empresa</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="FrontController?action=LerEmpresa">Ler Empresa</a>
+                <a class="nav-link" href="FrontController?action=AlterarEmpresa">Alterar Empresa</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="FrontController?action=ApagarEmpresa">Excluir Empresa</a>

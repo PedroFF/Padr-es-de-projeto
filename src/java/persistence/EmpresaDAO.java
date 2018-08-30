@@ -23,7 +23,7 @@ public class EmpresaDAO {
         try {
             conn = DatabaseLocator.getInstance().getConnection();
             st = conn.createStatement();
-            st.execute("insert into empresa(nomeEmpresa) values ('" + empresa.getNome() + "')");
+            st.execute("insert into empresa(nome) values ('" + empresa.getNome() + "')");
         } catch (SQLException e) {
             throw e;
         } finally {
@@ -54,7 +54,7 @@ public class EmpresaDAO {
             st = conn.createStatement();
             ResultSet rs = st.executeQuery(sql);
             if (rs.next()) {
-                return new Empresa(rs.getInt("id"), rs.getString("nomeEmpresa"));
+                return new Empresa(rs.getInt("id"), rs.getString("nome"));
             }
 
         } catch (SQLException e) {
@@ -76,7 +76,7 @@ public class EmpresaDAO {
             st = conn.createStatement();
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
-                empresas.add(new Empresa(rs.getInt("id"), rs.getString("nomeEmpresa")));
+                empresas.add(new Empresa(rs.getInt("id"), rs.getString("nome")));
             }
         } catch (SQLException e) {
             throw e;

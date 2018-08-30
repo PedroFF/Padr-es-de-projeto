@@ -3,13 +3,13 @@
 
 
 <%@include file="jspf/header.jspf" %>
-<title>Administração de Contato</title>
+<title>Administração de Empresa</title>
 </head>
 <body>
     <%@include file="jspf/nav.jspf" %>
     <h1>Cadastro de Empresa</h1>
     <form action="FrontController?action=GravarEmpresaPost" method="post">
-        Entre com seu nome
+        Entre com o nome da empresa
         <input type="text" name="textNome"/><br/>
         <input type="submit"/>
     </form>
