@@ -86,4 +86,55 @@ public class EmpresaDAO {
         return empresas;
     }
 
+    public Empresa read(String nome) throws ClassNotFoundException, SQLException {
+        Connection conn = null;
+        Statement st = null;
+
+        try {
+            conn = DatabaseLocator.getInstance().getConnection();
+            String sql = "SELECT * FROM EMPRESA WHERE NOME ='" + nome + "'";
+            st = conn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()) {
+                return new Empresa(rs.getString("nome"));
+            }
+
+        } catch (SQLException e) {
+            throw e;
+        } finally {
+            closeResources(conn, st);
+        }
+        return null;
+    }
+    
+    public void delete(Empresa empresa) throws ClassNotFoundException, SQLException {
+        Connection conn = null;
+        Statement st = null;
+
+        try {
+            conn = DatabaseLocator.getInstance().getConnection();
+            st = conn.createStatement();
+            st.execute("DELETE FROM empresa WHERE nome ='" + empresa.getNome() + "'");
+        } catch (SQLException e) {
+            throw e;
+        } finally {
+            closeResources(conn, st);
+        }
+    }
+    
+    public void update(Empresa empresa) throws ClassNotFoundException, SQLException {
+        Connection conn = null;
+        Statement st = null;
+
+        try {
+            conn = DatabaseLocator.getInstance().getConnection();
+            st = conn.createStatement();
+            st.execute("UPDATE empresa SET nome ='" + empresa.getNome() + "' WHERE id ='" + empresa.getId() + "'");
+        } catch (SQLException e) {
+            throw e;
+        } finally {
+            closeResources(conn, st);
+        }
+    }
+
 }
